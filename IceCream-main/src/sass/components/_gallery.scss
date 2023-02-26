@@ -1,0 +1,126 @@
+.gallery {
+  padding: 0px;
+  margin: 0px;
+  &__item {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.52px;
+    &--2 {
+      gap: 1.8px;
+    }
+
+    .gallery__img {
+      width: 43.59px;
+      height: 43.86px;
+      border-radius: 8px;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: 1s linear;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .large__image {
+      width: 89.4px;
+      height: 89.61px;
+    }
+    .gallery__item {
+      width: 43.59px;
+      height: 43.86px;
+      &--large {
+        width: 89.4px;
+        height: 89.61px;
+      }
+    }
+  }
+  &__container {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+  }
+  &_section {
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2.53px;
+    z-index: 2;
+    &__item {
+      @include gallery-list-item((1, 20px), (3, -30px), (5, -15px), (6, 15px));
+      &:nth-child(2) {
+        position: relative;
+      }
+      &:nth-child(4) {
+        position: relative;
+      }
+      &:nth-child(5) {
+        position: relative;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    &__container {
+      max-width: 768px;
+      margin-top: 200px;
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6.05px;
+      &:nth-child(2) {
+        gap: 4.54px;
+      }
+      &--2 {
+        gap: 4.54px;
+      }
+      .gallery__img {
+        width: 104.62px;
+        height: 105.14px;
+        border-radius: 20px;
+        &:hover {
+          transform: scale(1.2);
+          transition: 1s linear;
+          position: relative;
+        }
+      }
+      .large__image {
+        width: 214.55px;
+        height: 214.81px;
+      }
+      .gallery__item {
+        width: 104.62px;
+        height: 105.14px;
+      }
+      .gallery__item--large {
+        width: 214.55px;
+        height: 214.81px;
+      }
+    }
+    &__list {
+      gap: 6.07px;
+      &__item {
+        @include gallery-list-item((1, 45px), (3, -70px), (6, 55px));
+        &:nth-child(2) {
+          @include position;
+        }
+        &:nth-child(4) {
+          @include position;
+        }
+        &:nth-child(5) {
+          @include position;
+        }
+      }
+    }
+  }
+}

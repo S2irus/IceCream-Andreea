@@ -1,0 +1,35 @@
+/*placeholders helpers*/
+
+%indicators {
+  cursor: pointer;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+}
+
+%animationPink {
+  font-family: var(--second-font);
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--secondary1-color);
+  @include transitionCubicBezier;
+  display: inline-block;
+}
+%ColumnFlex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+%SocialPink {
+  background-color: var(--brand-color);
+  cursor: pointer;
+}
+%image_dim1x {
+  width: 89.4px;
+  height: 89.61px;
+}
+%item_dim1x {
+  width: 43.59px;
+  height: 43.86px;
+}
