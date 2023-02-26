@@ -29,6 +29,12 @@
     .large__image {
       width: 89.4px;
       height: 89.61px;
+      &:hover {
+        transform: scale(1.2);
+        transition: 1s linear;
+        position: relative;
+        z-index: 1;
+      }
     }
     .gallery__item {
       width: 43.59px;
@@ -97,6 +103,12 @@
       .large__image {
         width: 214.55px;
         height: 214.81px;
+        &:hover {
+          transform: scale(1.2);
+          transition: 1s linear;
+          position: relative;
+          z-index: 1;
+        }
       }
       .gallery__item {
         width: 104.62px;
